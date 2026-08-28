@@ -59,4 +59,5 @@ export circuit verifyVideo(videoHash: Opaque<"string">): [] {
 ```
 
 ---
-*Built with ❤️ for the Midnight Hackathon by **Khushi Sharma** ([College Name])*
+
+Developed by [Khushi Sharma](https://github.com/khushi-sharma2506)
