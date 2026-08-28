@@ -1,0 +1,11 @@
+{
+  "name": "deeptruth-bridge",
+  "version": "1.0.0",
+  "description": "Midnight Blockchain Bridge",
+  "main": "verify.js",
+  "type": "module",
+  "scripts": {
+    "start": "node verify.js"
+  },
+  "dependencies": {}
+}

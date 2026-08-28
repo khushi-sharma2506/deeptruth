@@ -1,0 +1,18 @@
+pragma language_version 0.23;
+
+// 1. PUBLIC LEDGER (What the world can see)
+// We store a public list of video hashes that have been verified.
+// The public will NEVER see who uploaded them, only that they are verified.
+export ledger verifiedHashes: Map<Opaque<"string">, boolean>;
+
+// 2. THE CIRCUIT (The Zero-Knowledge Logic)
+// This function is run locally on the user's machine. 
+export circuit verifyVideo(videoHash: Opaque<"string">): [] {
+    
+    // In Midnight, all function inputs are completely PRIVATE by default.
+    // The user's identity and IP address are never exposed to the blockchain.
+    
+    // We use 'disclose' to intentionally reveal ONLY the video hash 
+    // to the public ledger so news agencies can verify the video.
+    verifiedHashes.insert(disclose(videoHash), true);
+}
